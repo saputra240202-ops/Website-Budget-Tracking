@@ -196,18 +196,8 @@ export default {
       this.addToast(e.detail.message, e.detail.type || 'success')
     }
 
-    // Toast event listener — dipanggil dari halaman manapun
+    // Toast event listener — dipanggil dari halaman manapun via window.dispatchEvent
     window.addEventListener('show-toast', this.toastListener)
-
-    // Auto-show toast dari Inertia flash (success/error dari backend)
-    this.$watch(
-      () => this.page.props.flash,
-      (flash) => {
-        if (flash?.success) this.addToast(flash.success, 'success')
-        if (flash?.error)   this.addToast(flash.error,   'error')
-      },
-      { deep: true, immediate: true }
-    )
 
     this.themeListener = (e) => {
       this.applyTheme(e.detail)
