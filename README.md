@@ -25,29 +25,29 @@ Pastikan kamu sudah menginstal:
 * Laragon atau XAMPP (MySQL)
 
 ## 2. Setup Backend (Laravel)
-# Masuk ke folder backend
+Masuk ke folder backend
 cd nama-folder-laravel
 
-# Install dependency
+Install dependency
 composer install
 
-# Copy environment file
+Copy environment file
 cp .env.example .env
 
-# Generate app key
+Generate app key
 php artisan key:generate
 
-# Migrasi database
+Migrasi database
 php artisan migrate
 
 ## 3. Setup Frontend (Vue.js)
-# Masuk ke folder frontend
+Masuk ke folder frontend
 cd nama-folder-vue
 
-# Install package
+Install package
 npm install
 
-# Jalankan server development
+Jalankan server development
 npm run dev
 
 ## ⚙️ Konfigurasi Database
